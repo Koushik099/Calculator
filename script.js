@@ -1,9 +1,10 @@
 let screen = document.getElementById("screen");
 let buttons = document.querySelectorAll("button");
 let screenValue = "";
-
+let mouseCkickSound = new Audio("mouse sound.wav");
 for (items of buttons) {
   items.addEventListener("click", (e) => {
+    mouseCkickSound.play();
     let buttonText = e.target.innerText;
     if (buttonText == "x") {
       buttonText = "*";
